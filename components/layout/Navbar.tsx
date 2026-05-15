@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import { Menu, X, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 

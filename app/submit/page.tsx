@@ -103,7 +103,6 @@ export default function SubmitProjectPage() {
     return (
       <div className="min-h-screen flex items-center justify-center px-4 py-20">
         <div
-      initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} >
         <div className="text-center">
           <Card className="p-8">
             <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -124,7 +123,6 @@ export default function SubmitProjectPage() {
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div
-      initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} >
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Submit Your Project</h1>
           <p className="text-xl text-gray-400">Share your creation with the VoidForge community. Our team will review and approve your submission.</p>

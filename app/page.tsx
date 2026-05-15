@@ -26,12 +26,6 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div
-      initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            
-          >
         <div className="text-center mb-12">
             <div className="inline-block mb-4 px-4 py-2 bg-purple-900/30 border border-purple-700/50 rounded-full">
               <span className="text-purple-300 text-sm font-semibold">Welcome to VoidForge</span>
@@ -78,12 +72,6 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-purple-900/20">
         <div className="max-w-7xl mx-auto">
-          <div
-      initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            
-          >
         <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose VoidForge?</h2>
             <p className="text-gray-400 text-lg">Everything you need for premium gaming and creative resources</p>
@@ -95,9 +83,6 @@ export default function HomePage() {
               return (
                 <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
                 >
                   <Card hover className="p-6 text-center">
                     <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">

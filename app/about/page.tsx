@@ -32,9 +32,6 @@ export default function AboutPage() {
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero */}
-        <div
-          
-        >
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">About VoidForge</h1>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -45,10 +42,6 @@ export default function AboutPage() {
         </div>
 
         {/* Mission Section */}
-        <div
-          transition={{ delay: 0.1 }}
-          
-        >
         <div className="grid md:grid-cols-2 gap-12 mb-20 items-center">
           <div>
             <h2 className="text-4xl font-bold mb-6">Our Mission</h2>
@@ -64,20 +57,16 @@ export default function AboutPage() {
 
           <Card className="p-8">
             <div className="grid grid-cols-2 gap-6">
-              <div>
-                <div className="text-3xl font-bold gradient-text mb-2">50K+</div>
+        <div className="text-3xl font-bold gradient-text mb-2">50K+</div>
                 <div className="text-gray-400">Community Members</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold gradient-text mb-2">2.4K+</div>
+        <div className="text-3xl font-bold gradient-text mb-2">2.4K+</div>
                 <div className="text-gray-400">Projects</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold gradient-text mb-2">125K+</div>
+        <div className="text-3xl font-bold gradient-text mb-2">125K+</div>
                 <div className="text-gray-400">Downloads</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold gradient-text mb-2">890+</div>
+        <div className="text-3xl font-bold gradient-text mb-2">890+</div>
                 <div className="text-gray-400">Creators</div>
               </div>
             </div>
@@ -85,8 +74,6 @@ export default function AboutPage() {
         </div>
 
         {/* Values */}
-        <div
-      initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} >
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-center mb-12">Our Values</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -95,9 +82,6 @@ export default function AboutPage() {
               return (
                 <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
                 >
                   <Card hover className="p-6 h-full">
                     <Icon className="w-10 h-10 text-purple-400 mb-4" />
@@ -111,11 +95,6 @@ export default function AboutPage() {
         </div>
 
         {/* CTA */}
-        <div
-      initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          
-        >
         <div className="text-center">
           <Card className="p-12 border border-purple-600/30 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
             <h2 className="text-3xl font-bold mb-4">Join the VoidForge Community</h2>

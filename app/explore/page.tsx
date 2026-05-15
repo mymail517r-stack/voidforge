@@ -55,11 +55,6 @@ export default function ExplorePage() {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div
-      initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          
-        >
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Explore Resources</h1>
           
@@ -76,12 +71,6 @@ export default function ExplorePage() {
         </div>
 
         {/* Filters */}
-        <div
-      initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          
-        >
         <div className="mb-8 flex flex-col md:flex-row gap-4">
           <div className="flex-1">
             <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
@@ -124,11 +113,6 @@ export default function ExplorePage() {
             <div className="w-12 h-12 border-4 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
           </div>
         ) : projects.length > 0 ? (
-          <div
-      initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            
-          >
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />

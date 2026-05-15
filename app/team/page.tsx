@@ -40,11 +40,6 @@ export default function TeamPage() {
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div
-      initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          
-        >
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Meet the Team</h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -58,18 +53,10 @@ export default function TeamPage() {
             <div className="w-12 h-12 border-4 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
           </div>
         ) : creators.length > 0 ? (
-          <div
-      initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            
-          >
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {creators.map((creator, index) => (
               <div
                 key={creator.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
               >
                 <Card hover className="p-6 h-full flex flex-col">
                   <div className="mb-4">

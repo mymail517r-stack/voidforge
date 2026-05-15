@@ -60,11 +60,6 @@ export default function CategoriesPage() {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div
-      initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          
-        >
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Browse Categories</h1>
           <p className="text-xl text-gray-400">
@@ -72,20 +67,12 @@ export default function CategoriesPage() {
           </p>
         </div>
 
-        <div
-      initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          
-        >
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category, index) => {
             const Icon = category.icon;
             return (
               <div
                 key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
               >
                 <Link href={`/explore?category=${category.name}`}>
                   <Card

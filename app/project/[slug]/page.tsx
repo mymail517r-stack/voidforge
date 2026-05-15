@@ -55,8 +55,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <div className="mb-8">
+        <div className="mb-8">
             <Link href="/explore" className="text-purple-400 hover:text-purple-300 mb-4 inline-block">
               ← Back to Explore
             </Link>
@@ -114,20 +113,17 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 mb-8 py-6 border-y border-gray-800">
-                <div>
-                  <div className="flex items-center gap-2 text-gray-400 mb-1">
+        <div className="flex items-center gap-2 text-gray-400 mb-1">
                     <Eye className="w-4 h-4" /> Views
                   </div>
                   <div className="text-2xl font-bold">{project.views.toLocaleString()}</div>
                 </div>
-                <div>
-                  <div className="flex items-center gap-2 text-gray-400 mb-1">
+        <div className="flex items-center gap-2 text-gray-400 mb-1">
                     <Download className="w-4 h-4" /> Downloads
                   </div>
                   <div className="text-2xl font-bold">{project.downloads.toLocaleString()}</div>
                 </div>
-                <div>
-                  <div className="flex items-center gap-2 text-gray-400 mb-1">
+        <div className="flex items-center gap-2 text-gray-400 mb-1">
                     <Heart className="w-4 h-4" /> Likes
                   </div>
                   <div className="text-2xl font-bold">{project.likes.toLocaleString()}</div>
@@ -173,8 +169,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                       height={48}
                       className="rounded-lg"
                     />
-                    <div>
-                      <div className="font-bold">{project.author.name}</div>
+        <div className="font-bold">{project.author.name}</div>
                       <div className="text-sm text-gray-400">@{project.author.username}</div>
                     </div>
                   </div>
@@ -217,16 +212,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
               {/* Info */}
               <Card className="p-6 space-y-4">
-                <div>
-                  <div className="text-sm text-gray-400">File Size</div>
+        <div className="text-sm text-gray-400">File Size</div>
                   <div className="font-semibold">{project.fileSize}</div>
                 </div>
-                <div>
-                  <div className="text-sm text-gray-400">Category</div>
+        <div className="text-sm text-gray-400">Category</div>
                   <div className="font-semibold">{project.category}</div>
                 </div>
-                <div>
-                  <div className="text-sm text-gray-400">Last Updated</div>
+        <div className="text-sm text-gray-400">Last Updated</div>
                   <div className="font-semibold">{new Date(project.updatedAt).toLocaleDateString()}</div>
                 </div>
               </Card>

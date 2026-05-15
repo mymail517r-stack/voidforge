@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import { Download, Heart, Eye, Star } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
 import { Project } from '@/types';

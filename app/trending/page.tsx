@@ -28,11 +28,6 @@ export default function TrendingPage() {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div
-      initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          
-        >
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
             <TrendingUp className="w-8 h-8 text-pink-500" />
@@ -48,11 +43,6 @@ export default function TrendingPage() {
             <div className="w-12 h-12 border-4 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
           </div>
         ) : projects.length > 0 ? (
-          <div
-      initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            
-          >
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
