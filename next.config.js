@@ -15,8 +15,8 @@ const nextConfig = {
       { hostname: 'via.placeholder.com' },
     ],
   },
-  reactStrictMode: true,
   swcMinify: true,
+  productionBrowserSourceMaps: false,
 }
 
 module.exports = nextConfig
