@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Trash2, Edit, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
@@ -42,10 +41,12 @@ export default function AdminProjectsPage() {
   return (
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
+        <div
+      initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} >
+        <div className="mb-8">
           <h1 className="text-4xl font-bold mb-2">Manage Projects</h1>
           <p className="text-gray-400">View, edit, and delete projects</p>
-        </motion.div>
+        </div>
 
         {loading ? (
           <div className="flex justify-center py-20">

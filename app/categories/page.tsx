@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
 import { Gamepad2, MessageCircle, Palette, Zap, BookOpen, Wrench } from 'lucide-react';
@@ -61,26 +60,28 @@ export default function CategoriesPage() {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
+      initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          
         >
+        <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Browse Categories</h1>
           <p className="text-xl text-gray-400">
             Explore premium resources organized by category
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
+        <div
+      initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          
         >
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category, index) => {
             const Icon = category.icon;
             return (
-              <motion.div
+              <div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -99,10 +100,10 @@ export default function CategoriesPage() {
                     <div className="text-purple-400 font-semibold text-lg">{category.count} Resources</div>
                   </Card>
                 </Link>
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Download, Heart, Eye, Share2, Star } from 'lucide-react';
@@ -56,7 +55,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+        <div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <div className="mb-8">
             <Link href="/explore" className="text-purple-400 hover:text-purple-300 mb-4 inline-block">
               ← Back to Explore
@@ -233,7 +232,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               </Card>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { Upload, Image as ImageIcon, X } from 'lucide-react';
 import { Input } from '@/components/ui/Input';
@@ -132,10 +131,12 @@ export default function AdminUploadPage() {
   return (
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
+        <div
+      initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} >
+        <div className="mb-8">
           <h1 className="text-4xl font-bold mb-2">Upload New Project</h1>
           <p className="text-gray-400">Add a new resource to VoidForge</p>
-        </motion.div>
+        </div>
 
         <Card className="p-8">
           <form onSubmit={handleSubmit} className="space-y-8">

@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Mail, MessageCircle } from 'lucide-react';
 import { Input } from '@/components/ui/Input';
 import { Textarea } from '@/components/ui/Textarea';
@@ -37,12 +36,14 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-12">
+        <div
+      initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} >
+        <div className="mb-12">
           <h1 className="text-5xl font-bold mb-4">Get In Touch</h1>
           <p className="text-xl text-gray-400">
             Have questions or feedback? We'd love to hear from you.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <Card className="p-6">

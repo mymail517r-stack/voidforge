@@ -1,14 +1,13 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/Card';
 
 export default function DMCAPage() {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+        <div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <h1 className="text-5xl font-bold mb-12">DMCA Notice</h1>
 
           <Card className="p-8 space-y-8">
@@ -54,7 +53,7 @@ export default function DMCAPage() {
               <p className="text-gray-400 text-sm">Last Updated: May 15, 2026</p>
             </div>
           </Card>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

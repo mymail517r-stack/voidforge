@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Zap, Users, Rocket, Shield } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
 
@@ -33,26 +32,28 @@ export default function AboutPage() {
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
+      initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          
         >
+        <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">About VoidForge</h1>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             VoidForge is the ultimate premium gaming and creator platform. We connect thousands of
             creators with millions of users seeking the best Discord tools, Minecraft resources,
             gaming templates, graphics, and digital assets.
           </p>
-        </motion.div>
+        </div>
 
         {/* Mission Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
+      initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="grid md:grid-cols-2 gap-12 mb-20 items-center"
+          
         >
+        <div className="grid md:grid-cols-2 gap-12 mb-20 items-center">
           <div>
             <h2 className="text-4xl font-bold mb-6">Our Mission</h2>
             <p className="text-gray-400 text-lg mb-4">
@@ -85,16 +86,18 @@ export default function AboutPage() {
               </div>
             </div>
           </Card>
-        </motion.div>
+        </div>
 
         {/* Values */}
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="mb-20">
+        <div
+      initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} >
+        <div className="mb-20">
           <h2 className="text-4xl font-bold text-center mb-12">Our Values</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -105,18 +108,19 @@ export default function AboutPage() {
                     <h3 className="text-xl font-bold mb-2">{value.title}</h3>
                     <p className="text-gray-400">{value.description}</p>
                   </Card>
-                </motion.div>
+                </div>
               );
             })}
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
+      initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-center"
+          
         >
+        <div className="text-center">
           <Card className="p-12 border border-purple-600/30 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
             <h2 className="text-3xl font-bold mb-4">Join the VoidForge Community</h2>
             <p className="text-gray-400 mb-6 text-lg">
@@ -137,7 +141,7 @@ export default function AboutPage() {
               </a>
             </div>
           </Card>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

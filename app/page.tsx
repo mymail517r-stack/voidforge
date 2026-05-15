@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Zap, Sparkles, Users, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
@@ -27,12 +26,13 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
+      initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12"
+            
           >
+        <div className="text-center mb-12">
             <div className="inline-block mb-4 px-4 py-2 bg-purple-900/30 border border-purple-700/50 rounded-full">
               <span className="text-purple-300 text-sm font-semibold">Welcome to VoidForge</span>
             </div>
@@ -59,7 +59,7 @@ export default function HomePage() {
                 </Link>
               </Button>
             </div>
-          </motion.div>
+          </div>
 
           {/* Stats */}
           <div
@@ -78,21 +78,22 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-purple-900/20">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0 }}
+          <div
+      initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            
           >
+        <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose VoidForge?</h2>
             <p className="text-gray-400 text-lg">Everything you need for premium gaming and creative resources</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -105,7 +106,7 @@ export default function HomePage() {
                     <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
                     <p className="text-gray-400 text-sm">{feature.description}</p>
                   </Card>
-                </motion.div>
+                </div>
               );
             })}
           </div>

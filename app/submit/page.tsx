@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { Upload, X } from 'lucide-react';
 import { Input } from '@/components/ui/Input';
@@ -103,7 +102,9 @@ export default function SubmitProjectPage() {
   if (success) {
     return (
       <div className="min-h-screen flex items-center justify-center px-4 py-20">
-        <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center">
+        <div
+      initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} >
+        <div className="text-center">
           <Card className="p-8">
             <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">✓</span>
@@ -114,7 +115,7 @@ export default function SubmitProjectPage() {
               Back to Explore
             </Button>
           </Card>
-        </motion.div>
+        </div>
       </div>
     );
   }
@@ -122,10 +123,12 @@ export default function SubmitProjectPage() {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-12">
+        <div
+      initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} >
+        <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Submit Your Project</h1>
           <p className="text-xl text-gray-400">Share your creation with the VoidForge community. Our team will review and approve your submission.</p>
-        </motion.div>
+        </div>
 
         <Card className="p-8">
           <form onSubmit={handleSubmit} className="space-y-8">

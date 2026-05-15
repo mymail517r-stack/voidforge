@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Github, Instagram, MessageCircle } from 'lucide-react';
@@ -41,16 +40,17 @@ export default function TeamPage() {
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
+      initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          
         >
+        <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Meet the Team</h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Talented creators and developers building the best gaming and creative resources.
           </p>
-        </motion.div>
+        </div>
 
         {/* Creators Grid */}
         {loading ? (
@@ -58,13 +58,14 @@ export default function TeamPage() {
             <div className="w-12 h-12 border-4 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
           </div>
         ) : creators.length > 0 ? (
-          <motion.div
-            initial={{ opacity: 0 }}
+          <div
+      initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            
           >
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {creators.map((creator, index) => (
-              <motion.div
+              <div
                 key={creator.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -152,9 +153,9 @@ export default function TeamPage() {
                     )}
                   </div>
                 </Card>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         ) : (
           <div className="text-center py-20">
             <p className="text-gray-400 text-lg">No creators yet. Be the first to share!</p>

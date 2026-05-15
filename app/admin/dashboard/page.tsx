@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import { LogOut, Plus, Settings, Users, FileText, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -65,11 +64,12 @@ export default function AdminDashboardPage() {
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
+      initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex justify-between items-start mb-8"
+          
         >
+        <div className="flex justify-between items-start mb-8">
           <div>
             <h1 className="text-4xl font-bold mb-2">Admin Dashboard</h1>
             <p className="text-gray-400">Manage VoidForge platform</p>
@@ -84,15 +84,16 @@ export default function AdminDashboardPage() {
               <LogOut className="w-5 h-5" /> Logout
             </Button>
           </div>
-        </motion.div>
+        </div>
 
         {/* Stats Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
+      initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
+          
         >
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {statCards.map((stat, index) => {
             const Icon = stat.icon;
             const colorClass = {
@@ -103,7 +104,7 @@ export default function AdminDashboardPage() {
             }[stat.color];
 
             return (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -118,18 +119,19 @@ export default function AdminDashboardPage() {
                   <div className="text-3xl font-bold mb-1">{stat.value}</div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
                 </Card>
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Quick Actions */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
+      initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="grid md:grid-cols-3 gap-6 mb-8"
+          
         >
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
           <Link href="/admin/projects">
             <Card hover className="p-6 cursor-pointer">
               <FileText className="w-8 h-8 text-purple-400 mb-3" />
@@ -153,10 +155,10 @@ export default function AdminDashboardPage() {
               <p className="text-gray-400 text-sm">Add new resource to platform</p>
             </Card>
           </Link>
-        </motion.div>
+        </div>
 
         {/* Recent Projects */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -200,7 +202,7 @@ export default function AdminDashboardPage() {
               <p className="text-gray-400">No projects yet</p>
             )}
           </Card>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

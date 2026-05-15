@@ -1,0 +1,31 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
+  "env": {
+    "JWT_SECRET": {
+      "description": "JWT secret key for authentication",
+      "default": "voidforge_super_secret_key_2026"
+    },
+    "ADMIN_USERNAME": {
+      "description": "Admin username",
+      "default": "admin"
+    },
+    "ADMIN_PASSWORD": {
+      "description": "Admin password",
+      "default": "admin123"
+    },
+    "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME": {
+      "description": "Cloudinary cloud name",
+      "default": "dummycloud"
+    },
+    "CLOUDINARY_API_KEY": {
+      "description": "Cloudinary API key",
+      "default": "dummykey"
+    },
+    "CLOUDINARY_API_SECRET": {
+      "description": "Cloudinary API secret",
+      "default": "dummysecret"
+    }
+  }
+}
