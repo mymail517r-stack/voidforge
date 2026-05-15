@@ -9,28 +9,25 @@ import { Card } from '@/components/ui/Card';
 
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({
+  const [form, setForm] = useState({
     name: '',
     email: '',
     subject: '',
     message: '',
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
-    // Simulate sending
     setTimeout(() => {
+      alert('Thank you for your message!');
+      setForm({ name: '', email: '', subject: '', message: '' });
       setLoading(false);
-      alert('Thank you for your message! We will get back to you soon.');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 1500);
+    }, 1000);
   };
 
   return (
@@ -49,13 +46,11 @@ export default function ContactPage() {
             <h3 className="font-bold mb-2">Email</h3>
             <p className="text-gray-400 text-sm">support@voidforge.dev</p>
           </Card>
-
           <Card className="p-6">
             <MessageCircle className="w-8 h-8 text-blue-400 mb-3" />
             <h3 className="font-bold mb-2">Discord</h3>
             <p className="text-gray-400 text-sm">Join our Discord community</p>
           </Card>
-
           <Card className="p-6">
             <Mail className="w-8 h-8 text-pink-400 mb-3" />
             <h3 className="font-bold mb-2">Response Time</h3>
@@ -68,47 +63,43 @@ export default function ContactPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <Input
                 label="Your Name"
-                type="text"
                 name="name"
+                value={form.name}
+                onChange={handleChange}
                 placeholder="John Doe"
-                value={formData.name}
-                onChange={handleInputChange}
                 required
               />
-
               <Input
-                label="Email Address"
-                type="email"
+                label="Your Email"
                 name="email"
-                placeholder="you@example.com"
-                value={formData.email}
-                onChange={handleInputChange}
+                type="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="john@example.com"
                 required
               />
             </div>
 
             <Input
               label="Subject"
-              type="text"
               name="subject"
+              value={form.subject}
+              onChange={handleChange}
               placeholder="How can we help?"
-              value={formData.subject}
-              onChange={handleInputChange}
               required
             />
 
             <Textarea
               label="Message"
               name="message"
+              value={form.message}
+              onChange={handleChange}
               placeholder="Your message here..."
-              value={formData.message}
-              onChange={handleInputChange}
               required
-              rows={6}
             />
 
-            <Button type="submit" variant="primary" size="lg" loading={loading} className="w-full">
-              Send Message
+            <Button type="submit" disabled={loading} className="w-full">
+              {loading ? 'Sending...' : 'Send Message'}
             </Button>
           </form>
         </Card>

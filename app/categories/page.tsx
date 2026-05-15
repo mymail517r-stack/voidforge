@@ -1,58 +1,50 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
-import { Gamepad2, MessageCircle, Palette, Zap, BookOpen, Wrench } from 'lucide-react';
 
 const categories = [
   {
-    id: 'discord-tools',
-    name: 'Discord Tools',
-    description: 'Premium Discord bots, commands, and integrations',
-    icon: MessageCircle,
-    color: 'from-blue-600 to-blue-500',
-    count: '234+',
+    id: '1',
+    name: 'Games',
+    description: 'Complete games, game mods, and gaming resources',
+    count: '324 projects',
+    icon: '🎮',
   },
   {
-    id: 'minecraft-resources',
-    name: 'Minecraft Resources',
-    description: 'Texture packs, mods, skins, and shaders',
-    icon: Gamepad2,
-    color: 'from-green-600 to-green-500',
-    count: '456+',
+    id: '2',
+    name: 'Tools',
+    description: 'Development tools, utilities, and plugins',
+    count: '456 projects',
+    icon: '⚙️',
   },
   {
-    id: 'gaming-templates',
-    name: 'Gaming Templates',
-    description: 'Ready-to-use templates and configurations',
-    icon: Wrench,
-    color: 'from-purple-600 to-purple-500',
-    count: '189+',
+    id: '3',
+    name: 'Assets',
+    description: '3D models, textures, sprites, and animations',
+    count: '789 projects',
+    icon: '🎨',
   },
   {
-    id: 'graphics-logos',
-    name: 'Graphics & Logos',
-    description: 'Professional graphics, logos, and design assets',
-    icon: Palette,
-    color: 'from-pink-600 to-pink-500',
-    count: '312+',
+    id: '4',
+    name: 'Plugins',
+    description: 'Engine plugins and extensions',
+    count: '234 projects',
+    icon: '🔌',
   },
   {
-    id: 'configs',
-    name: 'Configs',
-    description: 'Game configs, settings, and optimization files',
-    icon: Zap,
-    color: 'from-yellow-600 to-yellow-500',
-    count: '145+',
+    id: '5',
+    name: 'Mods',
+    description: 'Game modifications and enhancements',
+    count: '567 projects',
+    icon: '✨',
   },
   {
-    id: 'documentation',
-    name: 'Documentation',
-    description: 'Guides, tutorials, and learning resources',
-    icon: BookOpen,
-    color: 'from-cyan-600 to-cyan-500',
-    count: '78+',
+    id: '6',
+    name: 'Templates',
+    description: 'Project templates and starter kits',
+    count: '123 projects',
+    icon: '📋',
   },
 ];
 
@@ -68,28 +60,16 @@ export default function CategoriesPage() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.map((category, index) => {
-            const Icon = category.icon;
-            return (
-              <div
-                key={category.id}
-              >
-                <Link href={`/explore?category=${category.name}`}>
-                  <Card
-                    hover
-                    className={`p-8 cursor-pointer bg-gradient-to-br ${category.color} opacity-20 hover:opacity-30 transition-opacity h-full flex flex-col`}
-                  >
-                    <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="w-7 h-7 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold mb-2">{category.name}</h3>
-                    <p className="text-gray-300 text-sm mb-4 flex-1">{category.description}</p>
-                    <div className="text-purple-400 font-semibold text-lg">{category.count} Resources</div>
-                  </Card>
-                </Link>
-              </div>
-            );
-          })}
+          {categories.map((category) => (
+            <Link key={category.id} href={`/explore?category=${category.name}`}>
+              <Card hover className="p-8 h-full">
+                <div className="text-5xl mb-4">{category.icon}</div>
+                <h3 className="text-2xl font-bold mb-2">{category.name}</h3>
+                <p className="text-gray-400 mb-4">{category.description}</p>
+                <p className="text-purple-400 text-sm font-semibold">{category.count}</p>
+              </Card>
+            </Link>
+          ))}
         </div>
       </div>
     </div>

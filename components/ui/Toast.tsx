@@ -30,10 +30,7 @@ export function Toast({ message, type = 'info', duration = 3000, onClose }: Toas
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
+    <div
       className={`bg-gradient-to-r ${colors[type]} border rounded-lg p-4 flex items-center gap-3 text-white shadow-lg max-w-md`}
     >
       {icons[type]}
@@ -41,6 +38,6 @@ export function Toast({ message, type = 'info', duration = 3000, onClose }: Toas
       <button onClick={onClose} className="hover:bg-white/10 p-1 rounded transition-colors">
         <X className="w-4 h-4" />
       </button>
-    </motion.div>
+    </div>
   );
 }

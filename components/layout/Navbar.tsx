@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-
 import { Menu, X, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
@@ -60,12 +59,7 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t border-purple-900/20 py-4"
-          >
+          <div className="md:hidden border-t border-purple-900/20 py-4">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -77,14 +71,14 @@ export function Navbar() {
               </Link>
             ))}
             <div className="pt-4 flex flex-col gap-2">
-              <Button variant="secondary" size="sm" className="w-full justify-center">
+              <Button variant="secondary" className="w-full text-sm" size="sm">
                 <Link href="/submit">Submit Project</Link>
               </Button>
-              <Button variant="primary" size="sm" className="w-full justify-center">
+              <Button variant="primary" className="w-full text-sm" size="sm">
                 <Link href="/admin/login">Admin</Link>
               </Button>
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
     </nav>

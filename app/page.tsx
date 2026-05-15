@@ -1,116 +1,159 @@
 'use client';
 
-import React from 'react';
+import { Download, Zap, Shield, Users } from 'lucide-react';
 import Link from 'next/link';
-import { Zap, Sparkles, Users, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import { ProjectCard } from '@/components/project/ProjectCard';
+
+const featuredProjects = [
+  {
+    id: '1',
+    title: 'Ultimate Discord Bot',
+    slug: 'ultimate-discord-bot',
+    description: 'Advanced bot with moderation, music, and economy features',
+    thumbnail: 'https://via.placeholder.com/800x450?text=Discord+Bot',
+    category: 'Tools',
+    views: 12500,
+    downloads: 3420,
+    likes: 890,
+    tags: ['discord', 'bot', 'moderation'],
+    featured: true,
+    verified: true,
+  },
+  {
+    id: '2',
+    title: 'Minecraft Shader Pack',
+    slug: 'minecraft-shader-pack',
+    description: 'Realistic graphics enhancement for Minecraft',
+    thumbnail: 'https://via.placeholder.com/800x450?text=Shader+Pack',
+    category: 'Mods',
+    views: 45000,
+    downloads: 12300,
+    likes: 5600,
+    tags: ['minecraft', 'shader', 'graphics'],
+    featured: true,
+    verified: true,
+  },
+  {
+    id: '3',
+    title: 'Game Dev Template',
+    slug: 'game-dev-template',
+    description: 'Complete template for starting your game development journey',
+    thumbnail: 'https://via.placeholder.com/800x450?text=Game+Template',
+    category: 'Templates',
+    views: 8900,
+    downloads: 2100,
+    likes: 450,
+    tags: ['template', 'game', 'development'],
+    featured: false,
+    verified: true,
+  },
+];
 
 export default function HomePage() {
-  const features = [
-    { icon: Zap, title: 'Lightning Fast', description: 'Download resources instantly with optimized delivery' },
-    { icon: Sparkles, title: 'Premium Quality', description: 'Curated collection of the best gaming resources' },
-    { icon: Users, title: 'Active Community', description: 'Connect with thousands of creators and developers' },
-    { icon: Rocket, title: 'Easy Upload', description: 'Share your creations with the world in minutes' },
-  ];
-
-  const stats = [
-    { label: 'Projects', value: '2.4K+' },
-    { label: 'Downloads', value: '125K+' },
-    { label: 'Creators', value: '890+' },
-    { label: 'Community', value: '50K+' },
-  ];
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-            <div className="inline-block mb-4 px-4 py-2 bg-purple-900/30 border border-purple-700/50 rounded-full">
-              <span className="text-purple-300 text-sm font-semibold">Welcome to VoidForge</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-black mb-6">
-              <span className="gradient-text">The Ultimate Creator</span>
-              <br />
-              <span className="text-white">Gaming Ecosystem</span>
-            </h1>
-
-            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-              Discover premium Discord tools, Minecraft resources, gaming templates, and digital assets from the world's best creators.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="primary">
-                <Link href="/explore" className="flex items-center gap-2">
-                  <Rocket className="w-5 h-5" /> Explore Now
-                </Link>
-              </Button>
-              <Button size="lg" variant="secondary">
-                <Link href="/submit" className="flex items-center gap-2">
-                  Share Your Work
-                </Link>
-              </Button>
-            </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-6xl md:text-7xl font-bold mb-6">
+            Welcome to <span className="gradient-text">VoidForge</span>
+          </h1>
+          <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+            The ultimate platform for premium gaming resources, tools, and creator content. Discover thousands of verified projects from our community.
+          </p>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Link href="/explore">
+              <Button size="lg">Explore Now</Button>
+            </Link>
+            <Link href="/submit">
+              <Button variant="secondary" size="lg">Submit Your Project</Button>
+            </Link>
           </div>
 
-          {/* Stats */}
-          <div
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16"
-          >
-            {stats.map((stat, index) => (
-              <Card key={index} className="p-6 text-center">
-                <div className="text-3xl font-bold gradient-text mb-2">{stat.value}</div>
-                <div className="text-gray-400 text-sm">{stat.label}</div>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-4 gap-6 mt-16">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">50K+</div>
+              <p className="text-gray-400">Community Members</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-400 mb-2">2.4K+</div>
+              <p className="text-gray-400">Projects</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">125K+</div>
+              <p className="text-gray-400">Downloads</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-pink-400 mb-2">890+</div>
+              <p className="text-gray-400">Active Creators</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-purple-900/20">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose VoidForge?</h2>
-            <p className="text-gray-400 text-lg">Everything you need for premium gaming and creative resources</p>
-          </div>
-
+          <h2 className="text-4xl font-bold text-center mb-12">Why Choose VoidForge?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div
-                  key={index}
-                >
-                  <Card hover className="p-6 text-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
-                    <p className="text-gray-400 text-sm">{feature.description}</p>
-                  </Card>
-                </div>
-              );
-            })}
+            <Card hover className="p-6">
+              <Zap className="w-8 h-8 text-purple-400 mb-4" />
+              <h3 className="font-bold mb-2">Lightning Fast</h3>
+              <p className="text-gray-400 text-sm">Instant access to premium resources with blazing fast downloads.</p>
+            </Card>
+            <Card hover className="p-6">
+              <Shield className="w-8 h-8 text-blue-400 mb-4" />
+              <h3 className="font-bold mb-2">Verified Content</h3>
+              <p className="text-gray-400 text-sm">All resources are carefully curated and verified by our team.</p>
+            </Card>
+            <Card hover className="p-6">
+              <Users className="w-8 h-8 text-cyan-400 mb-4" />
+              <h3 className="font-bold mb-2">Community Driven</h3>
+              <p className="text-gray-400 text-sm">Connect with thousands of creators and gamers worldwide.</p>
+            </Card>
+            <Card hover className="p-6">
+              <Download className="w-8 h-8 text-pink-400 mb-4" />
+              <h3 className="font-bold mb-2">Easy Sharing</h3>
+              <p className="text-gray-400 text-sm">Share your creations and get discovered by our growing community.</p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12">Featured Projects</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link href="/explore">
+              <Button>View All Projects</Button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <Card className="p-12 text-center border border-purple-600/30 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Join the Community?</h2>
-            <p className="text-gray-400 mb-8 text-lg">Start exploring premium resources or share your creations with thousands of creators.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="primary">
-                <Link href="/explore">Explore Resources</Link>
-              </Button>
-              <Button size="lg" variant="secondary">
-                <Link href="/submit">Submit Project</Link>
-              </Button>
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <Card className="p-12">
+            <h2 className="text-3xl font-bold mb-4">Start Your Journey Today</h2>
+            <p className="text-gray-400 mb-6 text-lg">
+              Join thousands of creators and gamers on VoidForge. Share your creations, discover amazing resources, and grow your community.
+            </p>
+            <div className="flex gap-4 justify-center flex-wrap">
+              <Link href="/explore">
+                <Button>Browse Projects</Button>
+              </Link>
+              <Link href="/submit">
+                <Button variant="secondary">Share Your Project</Button>
+              </Link>
             </div>
           </Card>
         </div>

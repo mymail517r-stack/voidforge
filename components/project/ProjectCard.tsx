@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
 import { Download, Heart, Eye, Star } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
 import { Project } from '@/types';
@@ -17,11 +16,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
   const [liked, setLiked] = React.useState(false);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.05 }}
-    >
+    <div>
       <Link href={`/project/${project.slug}`}>
         <Card hover className="overflow-hidden group cursor-pointer h-full">
           <div className="relative overflow-hidden h-48 bg-gradient-to-br from-purple-900/20 to-blue-900/20">
@@ -78,6 +73,6 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           </div>
         </Card>
       </Link>
-    </motion.div>
+    </div>
   );
 }
