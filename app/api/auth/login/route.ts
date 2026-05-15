@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { generateToken, validateCredentials } from '@/lib/auth';
+import { generateToken } from '@/lib/auth';
 
 export async function POST(request: NextRequest) {
   try {
@@ -15,19 +15,24 @@ export async function POST(request: NextRequest) {
     const adminUsername = process.env.ADMIN_USERNAME || 'admin';
     const adminPassword = process.env.ADMIN_PASSWORD || 'admin123';
 
-    if (!validateCredentials(username, password, adminUsername, adminPassword)) {
+    // Validate credentials
+    if (username !== adminUsername || password !== adminPassword) {
       return NextResponse.json(
-        { error: 'Invalid credentials' },
+        { error: 'Invalid credentials. Default: admin / admin123' },
         { status: 401 }
       );
     }
 
+    // Generate token
     const token = generateToken(username, 'Owner');
+    
+    // Create response
     const response = NextResponse.json(
       { success: true, message: 'Login successful' },
       { status: 200 }
     );
 
+    // Set secure cookie
     response.cookies.set('vf_token', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
@@ -38,6 +43,7 @@ export async function POST(request: NextRequest) {
 
     return response;
   } catch (error) {
+    console.error('Login error:', error);
     return NextResponse.json(
       { error: 'Login failed' },
       { status: 500 }
