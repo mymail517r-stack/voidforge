@@ -72,7 +72,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6 mt-16">
+          <div className="grid md:grid-cols-4 gap-6 mt-16 stagger">
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-400 mb-2">50K+</div>
               <p className="text-gray-400">Community Members</p>
@@ -126,7 +126,7 @@ export default function HomePage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">Featured Projects</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger">
             {featuredProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
@@ -159,5 +159,12 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+  );
+}
+  );
+}
+v>
+  );
+}
   );
 }

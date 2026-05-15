@@ -26,15 +26,21 @@ export default function AdminLoginPage() {
         body: JSON.stringify({ username, password }),
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        setError('Invalid credentials');
+        setError(data.error || 'Invalid credentials');
         setLoading(false);
         return;
       }
 
+      // Wait a moment for cookie to be set
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
       router.push('/admin/dashboard');
       router.refresh();
     } catch (err) {
+      console.error('Login error:', err);
       setError('Login failed. Please try again.');
       setLoading(false);
     }
@@ -43,9 +49,9 @@ export default function AdminLoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4 py-20">
       <div className="w-full max-w-md">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+        <div className="text-center mb-8 animate-slideDown">
+          <div className="inline-flex items-center gap-3 mb-4 hover-scale">
+            <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center animate-pulse-glow">
               <Zap className="w-6 h-6 text-white" />
             </div>
             <span className="text-2xl font-bold gradient-text">VoidForge Admin</span>

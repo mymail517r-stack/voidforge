@@ -1,112 +1,72 @@
-{
-  "projects": [
-    {
-      "id": "1",
-      "title": "Ultimate Discord Bot Framework",
-      "slug": "discord-bot-framework",
-      "description": "Professional Discord bot development framework with advanced features and easy setup.",
-      "content": "# Ultimate Discord Bot Framework\n\nA comprehensive framework for building powerful Discord bots with TypeScript.",
-      "thumbnail": "https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=500&h=300&fit=crop",
-      "screenshots": ["https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=800"],
-      "downloadLink": "https://github.com/example/discord-bot",
-      "category": "Discord Tools",
-      "tags": ["discord", "bot", "typescript", "framework"],
-      "version": "2.1.0",
-      "fileSize": "45.2 MB",
-      "author": {
-        "id": "creator1",
-        "name": "Alex Developer",
-        "username": "alexdev",
-        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
-        "bio": "Full-stack developer and Discord enthusiast",
-        "discord": "alexdev#0001",
-        "github": "alexdev",
-        "skills": ["TypeScript", "Node.js", "Discord.js"],
-        "badges": ["verified", "top-creator"],
-        "role": "Creator"
-      },
-      "views": 3240,
-      "downloads": 512,
-      "likes": 284,
-      "featured": true,
-      "trending": true,
-      "verified": true,
-      "createdAt": "2026-03-15T10:30:00Z",
-      "updatedAt": "2026-05-10T14:22:00Z",
-      "changelog": "- Added slash commands support\n- Improved error handling\n- Added rate limiting"
-    },
-    {
-      "id": "2",
-      "title": "Minecraft Resource Pack Pro",
-      "slug": "minecraft-resource-pack-pro",
-      "description": "Ultra-realistic 4K resource pack with PBR textures for Minecraft Java Edition.",
-      "content": "# Minecraft Resource Pack Pro\n\nTransform your Minecraft experience with this premium resource pack.",
-      "thumbnail": "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=500&h=300&fit=crop",
-      "screenshots": ["https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800"],
-      "downloadLink": "https://example.com/minecraft-pack",
-      "category": "Minecraft Resources",
-      "tags": ["minecraft", "texture-pack", "4k", "pbr"],
-      "version": "1.0.0",
-      "fileSize": "2.1 GB",
-      "author": {
-        "id": "creator2",
-        "name": "CraftMaster",
-        "username": "craftmaster",
-        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Craft",
-        "bio": "Minecraft content creator and texture artist",
-        "discord": "craftmaster#0002",
-        "instagram": "craftmaster_mc",
-        "skills": ["Texture Design", "Blender", "Minecraft"],
-        "badges": ["verified"],
-        "role": "Creator"
-      },
-      "views": 5120,
-      "downloads": 891,
-      "likes": 642,
-      "featured": true,
-      "trending": false,
-      "verified": true,
-      "createdAt": "2026-02-20T08:15:00Z",
-      "updatedAt": "2026-05-12T09:45:00Z",
-      "changelog": "- Initial release"
-    }
-  ],
-  "admins": [
-    {
-      "id": "admin1",
-      "username": "admin",
-      "password": "YWRtaW4xMjM=",
-      "email": "admin@voidforge.dev",
-      "role": "Owner",
-      "createdAt": "2026-01-01T00:00:00Z",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Admin"
-    }
-  ],
-  "creators": [
-    {
+[
+  {
+    "id": "1",
+    "title": "Ultimate Discord Bot Framework",
+    "slug": "discord-bot-framework",
+    "description": "Professional Discord bot development framework with advanced features and easy setup.",
+    "content": "# Ultimate Discord Bot Framework\n\nA comprehensive framework for building powerful Discord bots with TypeScript.",
+    "thumbnail": "https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=500&h=300&fit=crop",
+    "screenshots": ["https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=800"],
+    "downloadLink": "https://github.com/example/discord-bot",
+    "category": "Discord Tools",
+    "tags": ["discord", "bot", "typescript", "framework"],
+    "version": "2.1.0",
+    "fileSize": "45.2 MB",
+    "author": {
       "id": "creator1",
       "name": "Alex Developer",
       "username": "alexdev",
       "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
-      "bio": "Full-stack developer and Discord enthusiast. Building amazing tools for the community.",
+      "bio": "Full-stack developer and Discord enthusiast",
       "discord": "alexdev#0001",
       "github": "alexdev",
-      "instagram": "alexdev_",
-      "skills": ["TypeScript", "Node.js", "Discord.js", "React"],
+      "skills": ["TypeScript", "Node.js", "Discord.js"],
       "badges": ["verified", "top-creator"],
       "role": "Creator"
     },
-    {
+    "views": 3240,
+    "downloads": 512,
+    "likes": 284,
+    "featured": true,
+    "trending": true,
+    "verified": true,
+    "createdAt": "2026-03-15T10:30:00Z",
+    "updatedAt": "2026-05-10T14:22:00Z",
+    "changelog": "- Added slash commands support\n- Improved error handling\n- Added rate limiting"
+  },
+  {
+    "id": "2",
+    "title": "Minecraft Resource Pack Pro",
+    "slug": "minecraft-resource-pack-pro",
+    "description": "Ultra-realistic 4K resource pack with PBR textures for Minecraft Java Edition.",
+    "content": "# Minecraft Resource Pack Pro\n\nTransform your Minecraft experience with this premium resource pack.",
+    "thumbnail": "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=500&h=300&fit=crop",
+    "screenshots": ["https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800"],
+    "downloadLink": "https://example.com/minecraft-pack",
+    "category": "Minecraft Resources",
+    "tags": ["minecraft", "texture-pack", "4k", "pbr"],
+    "version": "1.0.0",
+    "fileSize": "2.1 GB",
+    "author": {
       "id": "creator2",
       "name": "CraftMaster",
       "username": "craftmaster",
       "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Craft",
-      "bio": "Minecraft content creator and texture artist. Creating premium resources since 2020.",
+      "bio": "Minecraft content creator and texture artist",
       "discord": "craftmaster#0002",
       "instagram": "craftmaster_mc",
-      "skills": ["Texture Design", "Blender", "3D Modeling"],
+      "skills": ["Texture Design", "Blender", "Minecraft"],
       "badges": ["verified"],
       "role": "Creator"
-    }
-  ]
-}
+    },
+    "views": 5120,
+    "downloads": 891,
+    "likes": 642,
+    "featured": true,
+    "trending": false,
+    "verified": true,
+    "createdAt": "2026-02-20T08:15:00Z",
+    "updatedAt": "2026-05-12T09:45:00Z",
+    "changelog": "- Initial release"
+  }
+]
