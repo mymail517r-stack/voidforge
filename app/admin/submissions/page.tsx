@@ -107,8 +107,7 @@ export default function AdminSubmissionsPage() {
   return (
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div
-      initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} >
+        <div>
         <div className="mb-8">
           <h1 className="text-4xl font-bold mb-2">Submission Queue</h1>
           <p className="text-gray-400">Review and manage user submissions</p>

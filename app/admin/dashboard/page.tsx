@@ -65,8 +65,6 @@ export default function AdminDashboardPage() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div
-      initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
           
         >
         <div className="flex justify-between items-start mb-8">
@@ -88,8 +86,6 @@ export default function AdminDashboardPage() {
 
         {/* Stats Grid */}
         <div
-      initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           
         >
@@ -126,8 +122,6 @@ export default function AdminDashboardPage() {
 
         {/* Quick Actions */}
         <div
-      initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           
         >
