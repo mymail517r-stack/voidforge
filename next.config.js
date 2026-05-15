@@ -17,6 +17,7 @@ const nextConfig = {
   },
   swcMinify: true,
   productionBrowserSourceMaps: false,
+  reactStrictMode: false,
 }
 
 module.exports = nextConfig
